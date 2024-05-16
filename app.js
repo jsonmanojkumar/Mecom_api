@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 
-// routes start
+// Routes start
 const usersRoutes = require('./routes/users_routes');
 const categoriesRoutes = require('./routes/categories_routes');
 const subCategoriesRoutes = require('./routes/subCategories_routes');
@@ -17,7 +17,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 
-// Middleware
+
 app.use(bodyParser.json());
 app.use(cors("*"));
 
