@@ -3,15 +3,12 @@ const mongoose = require('mongoose');
 const cartSchema = new mongoose.Schema({
   productName: {
     type: String,
-    required: true
   },
   productId: {
     type: String,
-    required: true
   },
   itemCount: {
     type: String,
-    require: true
   },
   color: {
     type: String
@@ -21,19 +18,17 @@ const cartSchema = new mongoose.Schema({
   },
   totalAmount: {
     type: String,
-    require: true
   },
   inStock:{
     type: Boolean,
     default: true,
-    require: true
   },
-  is_deleted: {
+  isDeleted: {
     type: Boolean,
     default: false
   }
 
-}, { timestamps: { createdAt: 'created_at', updatedAt: 'updated_at' } });
+}, { timestamps: { createdAt: 'createdAt', updatedAt: 'updatedAt' } });
 
 
 

@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
-const mediaSchema = new mongoose.Schema({
-  image: {
+const wishListSchema = new mongoose.Schema({
+  productId: {
     type: String,
     required: true
   },
@@ -15,4 +15,4 @@ const mediaSchema = new mongoose.Schema({
 
 
 
-module.exports = mongoose.model('media', mediaSchema);
+module.exports = mongoose.model('wishLists', wishListSchema);

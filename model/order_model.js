@@ -1,11 +1,11 @@
 const mongoose = require('mongoose');
 
 const productSchema = new mongoose.Schema({
-  categoryId: {
+  orderUserId: {
     type: String,
     required: true
   },
-  subCategoryId: {
+  productId: {
     type: String,
     required: true
   },

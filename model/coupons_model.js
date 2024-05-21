@@ -1,17 +1,17 @@
 const mongoose = require('mongoose');
 
-const sliderSchema = new mongoose.Schema({
-  name: {
+const couponSchema = new mongoose.Schema({
+  couponName: {
     type: String,
-    required: true
   },
-  description: {
+  couponDescription: {
     type: String,
-    required: true
   },
-  image: {
+  couponNumber: {
     type: String,
-    required: true
+  },
+  expireDate: {
+    type: Date,
   },
   isDeleted: {
     type: Boolean,
@@ -21,6 +21,4 @@ const sliderSchema = new mongoose.Schema({
 }, { timestamps: { createdAt: 'createdAt', updatedAt: 'updatedAt' } });
 
 
-
-
-module.exports = mongoose.model('slider', sliderSchema);
+module.exports = mongoose.model('coupons', couponSchema);

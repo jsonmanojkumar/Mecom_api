@@ -9,12 +9,12 @@ const categoriesSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  is_deleted: {
+  isDeleted: {
     type: Boolean,
     default: false
   }
 
-}, { timestamps: { createdAt: 'created_at', updatedAt: 'updated_at' } });
+}, { timestamps: { createdAt: 'createdAt', updatedAt: 'updatedAt' } });
 
 
 

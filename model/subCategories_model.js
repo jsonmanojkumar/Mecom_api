@@ -16,12 +16,12 @@ const subCategoriesSchema = new mongoose.Schema({
   description: {
     type: String,
   },
-  is_deleted: {
+  isDeleted: {
     type: Boolean,
     default: false
   }
 
-}, { timestamps: { createdAt: 'created_at', updatedAt: 'updated_at' } });
+}, { timestamps: { createdAt: 'createdAt', updatedAt: 'updatedAt' } });
 
 
 

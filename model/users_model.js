@@ -3,27 +3,28 @@ const mongoose = require('mongoose');
 const usersSchema = new mongoose.Schema({
   username: {
     type: String,
-    required: true
   },
   mobile: {
-    type: Number,
-    required: true
+    type: String,
+    required: true,
+    unique: true
   },
   password: {
     type: String,
-    required: true
+    required: true,
   },
   email: {
     type: String
   },
-  is_deleted: {
+  profileImage: {
+    type: String
+  },
+  isDeleted: {
     type: Boolean,
     default: false
   }
 
-}, { timestamps: { createdAt: 'created_at', updatedAt: 'updated_at' } });
-
-
+}, { timestamps: { createdAt: 'createdAt', updatedAt: 'updatedAt' } });
 
 
 module.exports = mongoose.model('users', usersSchema);

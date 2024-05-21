@@ -1,20 +1,20 @@
 const mongoose = require('mongoose');
 
 const AddressSchema = new mongoose.Schema({
+  userId: {
+    type: String,
+  },
   firstName: {
     type: String,
-    required: true
   },
   lastName: {
     type: String,
-    required: true
   },
   address: {
     type: String,
-    required: true
   },
   pin: {
-    type: String
+    type: Number
   },
   state: {
     type: String
@@ -28,11 +28,14 @@ const AddressSchema = new mongoose.Schema({
   alternateNumber: {
     type: String
   },
-  is_deleted: {
+  landmark: {
+    type: String
+  },
+  isDeleted: {
     type: Boolean,
     default: false
   }
 
-}, { timestamps: { createdAt: 'created_at', updatedAt: 'updated_at' } });
+}, { timestamps: { createdAt: 'createdAt', updatedAt: 'updatedAt' } });
 
 module.exports = mongoose.model('addresses', AddressSchema);
